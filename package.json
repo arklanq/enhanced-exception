@@ -1,7 +1,7 @@
 {
   "name": "enhanced-exception",
   "author": "IdkMan2",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "keywords": [
     "next.js",
@@ -50,18 +50,18 @@
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
-    "rollup-plugin-delete": "^2.0.0",
     "@types/jest": "^29.5.0",
-    "jest": "^29.5.0",
-    "rimraf": "^4.4.1",
-    "rollup": "^3.20.2",
-    "ts-jest": "^29.0.5",
-    "ts-jest-resolver": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
+    "jest": "^29.5.0",
     "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "rollup": "^3.20.2",
+    "rollup-plugin-delete": "^2.0.0",
+    "ts-jest": "^29.0.5",
+    "ts-jest-resolver": "^2.0.1",
     "typescript": "^5.0.2"
   }
 }
