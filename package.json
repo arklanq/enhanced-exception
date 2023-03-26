@@ -1,0 +1,67 @@
+{
+  "name": "enhanced-exception",
+  "author": "IdkMan2",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": [
+    "next.js",
+    "next",
+    "react",
+    "plugins",
+    "compose"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IdkMan2/enhanced-exception.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IdkMan2/enhanced-exception/issues"
+  },
+  "homepage": "https://github.com/IdkMan2/enhanced-exception/lib#readme",
+  "scripts": {
+    "build:clean": "rimraf dist",
+    "build:js": "rollup --config rollup.config.mjs",
+    "build:ts": "tsc --project tsconfig.json",
+    "build": "yarn run build:clean && yarn run build:js && yarn run build:ts",
+    "test": "jest",
+    "lint": "yarn run eslint --config ../.eslintrc.js --ignore-path ../.eslintignore --fix \"src/**/*.ts\"",
+    "format": "yarn run prettier --config ../.prettierrc.js --ignore-path ../.prettierignore --loglevel warn --write \"src/**/*.ts\""
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/cjs/main.js",
+  "module": "./dist/esm/main.js",
+  "types": "./dist/types/main.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/types/main.d.ts",
+        "default": "./dist/cjs/main.js"
+      },
+      "import": {
+        "types": "./dist/types/main.d.ts",
+        "default": "./dist/esm/main.js"
+      }
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "rimraf": "^4.4.1",
+    "rollup": "^3.20.2",
+    "ts-jest": "^29.0.5",
+    "ts-jest-resolver": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.2"
+  }
+}
