@@ -12,10 +12,10 @@ export class Exception extends Error {
 
   // eslint-disable-next-line @typescript-eslint/ban-types
   protected enhanceStackTrace(constructor: Function, cause: unknown) {
-    if(Object.hasOwnProperty.call(Error, 'captureStackTrace')) Error.captureStackTrace(this, constructor);
+    if (Object.hasOwnProperty.call(Error, 'captureStackTrace')) Error.captureStackTrace(this, constructor);
 
-    if(cause != undefined) {
-      if(cause instanceof Error && cause.stack !== undefined) this.stack += `\nCaused by: ${cause.stack}`;
+    if (cause != undefined) {
+      if (cause instanceof Error && cause.stack !== undefined) this.stack += `\nCaused by: ${cause.stack}`;
       else this.stack += `\nCaused by: ${String(cause)}`;
     }
   }

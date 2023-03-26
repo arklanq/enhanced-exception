@@ -1,4 +1,4 @@
-import {Exception} from '../src/Exception';
+import {Exception} from 'enhanced-exception';
 
 describe('"Exception" class', () => {
   describe('object instance constructed', () => {

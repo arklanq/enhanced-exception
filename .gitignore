@@ -8,6 +8,9 @@ Thumbs.db
 
 # App
 node_modules
+dist
+
+# Tools
 yarn-debug.log*
 yarn-error.log*
 *.tsbuildinfo

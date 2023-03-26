@@ -19,31 +19,30 @@
   },
   "homepage": "https://github.com/IdkMan2/enhanced-exception/lib#readme",
   "scripts": {
-    "build:clean": "rimraf dist",
-    "build:js": "rollup --config rollup.config.mjs",
-    "build:ts": "tsc --project tsconfig.json",
-    "build": "yarn run build:clean && yarn run build:js && yarn run build:ts",
+    "build": "rollup -c rollup/rollup.config.js",
     "test": "jest",
-    "lint": "yarn run eslint --config ../.eslintrc.js --ignore-path ../.eslintignore --fix \"src/**/*.ts\"",
-    "format": "yarn run prettier --config ../.prettierrc.js --ignore-path ../.prettierignore --loglevel warn --write \"src/**/*.ts\""
+    "lint": "yarn run eslint --config .eslintrc.cjs --ignore-path .eslintignore --fix \"{src,test}/**/*.ts\"",
+    "format": "yarn run prettier --config .prettierrc.cjs --ignore-path .prettierignore --loglevel warn --write \"{src,test}/**/*.ts\"",
+    "ts-check": "tsc --project tsconfig.json --noEmit",
+    "clear-leavings": "rimraf *.tsbuildinfo *.eslintcache yarn-debug.log* yarn-error.log*"
   },
   "files": [
     "dist",
     "README.md"
   ],
   "type": "module",
-  "main": "./dist/cjs/main.js",
-  "module": "./dist/esm/main.js",
-  "types": "./dist/types/main.d.ts",
+  "main": "./dist/cjs/Exception.js",
+  "module": "./dist/esm/Exception.js",
+  "types": "./dist/cjs/Exception.d.ts",
   "exports": {
     ".": {
       "require": {
-        "types": "./dist/types/main.d.ts",
-        "default": "./dist/cjs/main.js"
+        "types": "./dist/cjs/Exception.d.ts",
+        "default": "./dist/cjs/Exception.js"
       },
       "import": {
-        "types": "./dist/types/main.d.ts",
-        "default": "./dist/esm/main.js"
+        "types": "./dist/esm/Exception.d.ts",
+        "default": "./dist/esm/Exception.js"
       }
     }
   },
@@ -51,6 +50,7 @@
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
+    "rollup-plugin-delete": "^2.0.0",
     "@types/jest": "^29.5.0",
     "jest": "^29.5.0",
     "rimraf": "^4.4.1",
