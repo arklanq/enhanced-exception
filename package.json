@@ -1,5 +1,6 @@
 {
   "name": "enhanced-exception",
+  "description": "Special \"Exception\" class to significantly improve your stack traces.",
   "author": "IdkMan2",
   "version": "1.0.0",
   "license": "MIT",
