@@ -1,0 +1,12 @@
+/dist
+/rollup
+/src
+/tests
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.nvmrc
+.prettierignore
+.prettierrc.cjs
+jest.config.js
+tsconfig.json
