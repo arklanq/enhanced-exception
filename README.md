@@ -115,12 +115,12 @@ try {
   // some neat code here...
   throw new Error('Database record not found');
 } catch(e: unknown) {
-  throw new PlayerNotFoundException('Failed to do some dangerous stuff.', e);
+  throw new PlayerNotFoundException('IdkMan2', e);
 }
 ```
 
 ```log
-PlayerNotFoundException: Player "Failed to do some dangerous stuff." not found.
+PlayerNotFoundException: Player "IdkMan2." not found.
     at file:///path/to/project/src/real-world-example.js:13:11
     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
 Caused by: Error: Database record not found
