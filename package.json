@@ -52,6 +52,7 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/jest": "^29.5.0",
+    "@types/rollup-plugin-generate-package-json": "^3.2.0",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
@@ -64,5 +65,8 @@
     "ts-jest": "^29.0.5",
     "ts-jest-resolver": "^2.0.1",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "rollup-plugin-generate-package-json": "^3.2.0"
   }
 }
