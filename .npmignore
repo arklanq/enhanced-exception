@@ -1,5 +1,5 @@
 /dist
-/rollup
+/.config/rollup
 /src
 /tests
 .eslintignore
@@ -8,5 +8,5 @@
 .nvmrc
 .prettierignore
 .prettierrc.cjs
-jest.config.js
+.config/jest/config.js
 tsconfig.json

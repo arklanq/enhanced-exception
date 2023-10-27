@@ -20,12 +20,17 @@
   },
   "homepage": "https://github.com/IdkMan2/enhanced-exception/lib#readme",
   "scripts": {
-    "build": "rollup -c rollup/rollup.config.js",
-    "test": "jest",
-    "lint": "yarn run eslint --config .eslintrc.cjs --ignore-path .eslintignore --fix \"{src,test}/**/*.ts\"",
-    "format": "yarn run prettier --config .prettierrc.cjs --ignore-path .prettierignore --loglevel warn --write \"{src,test}/**/*.ts\"",
-    "ts-check": "tsc --project tsconfig.json --noEmit",
-    "clear-leavings": "rimraf *.tsbuildinfo *.eslintcache yarn-debug.log* yarn-error.log*"
+    "build": ".config/rollup -c .config/rollup/config.js",
+    "prebuild-production": "yarn clear-cache && yarn check-code && yarn test-code && yarn lint-code && yarn format-code",
+    "build-production": "yarn build --environment NODE_ENV:production",
+    "format-code": "prettier --log-level warn --write \"{src,test}/**/*.ts\"",
+    "lint-code": "eslint \"{src,test}/**/*.ts\" --cache-location node_modules/.cache/eslint/.eslint-cache --fix",
+    "check-code": "tsc --project tsconfig.json --noEmit",
+    "test-code": "jest --config .config/jest/config.js",
+    "check-updates": "ncu --configFilePath .config/ncu --configFileName ncu.config.cjs",
+    "force-updates": "ncu --configFilePath .config/ncu --configFileName ncu.config.cjs -u",
+    "clear-dist": "rimraf dist",
+    "clear-cache": "rimraf node_modules/.cache"
   },
   "files": [
     "dist",

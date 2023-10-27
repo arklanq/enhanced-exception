@@ -1,2 +1,16 @@
-node_modules
-dist
+# OS
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# Environment
+/node_modules
+
+# Tools
+yarn-debug.log*
+yarn-error.log*
+
+# App
+/dist
