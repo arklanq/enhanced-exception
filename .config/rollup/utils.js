@@ -21,7 +21,7 @@ export function createExternalDependenciesSet(projectManifest) {
     projectManifest.optionalDependencies
   ]
     .reduce((acc, maybeEntries) => {
-      if (maybeEntries) acc.push(Object.keys(maybeEntries));
+      if (maybeEntries) acc.push(...Object.keys(maybeEntries));
       return acc;
     }, [])
     .map((packageName) => new RegExp(`^${packageName}(/.*)?`));
