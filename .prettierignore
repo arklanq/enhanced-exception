@@ -9,8 +9,7 @@
 /node_modules
 
 # Tools
-yarn-debug.log*
-yarn-error.log*
+npm-debug.log*
 
 # App
 /dist

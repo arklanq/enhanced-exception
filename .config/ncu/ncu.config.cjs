@@ -17,7 +17,7 @@ const exceptions = {
  * @type {import('npm-check-updates').RunOptions}
  */
 const config = {
-  packageManager: 'yarn',
+  packageManager: 'npm',
   // reject: ['@types/node'],
   target: (packageName, _versionRange) => {
     if(exceptions.minor.includes(packageName))
