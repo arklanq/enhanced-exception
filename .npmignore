@@ -2,8 +2,6 @@
 /.config
 /src
 /tests
-.eslintignore
-.eslintrc.cjs
 .gitignore
 .nvmrc
 .prettierignore

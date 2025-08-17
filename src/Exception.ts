@@ -10,7 +10,7 @@ export class Exception extends Error {
     this.enhanceStackTrace(this.constructor, cause);
   }
 
-  // eslint-disable-next-line @typescript-eslint/ban-types
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   protected enhanceStackTrace(constructor: Function, cause: unknown) {
     if (Object.hasOwnProperty.call(Error, 'captureStackTrace')) Error.captureStackTrace(this, constructor);
 
